@@ -1,0 +1,30 @@
+{
+  "name": "dontstop-api",
+  "version": "1.0.0",
+  "description": "The simple task reminder for those who never stops",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neldevfull/dontstop.git"
+  },
+  "keywords": [
+    "task",
+    "reminder"
+  ],
+  "author": "neldevfull",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neldevfull/dontstop/issues"
+  },
+  "homepage": "https://github.com/neldevfull/dontstop#readme",
+  "dependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.6.5",
+    "babel-core": "^6.6.5",
+    "babel-preset-es2015": "^6.6.0",
+    "express": "^4.13.4"
+  }
+}
