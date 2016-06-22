@@ -1,23 +1,12 @@
 import express from "express";
+import consign from "consign";
 
 
-const PORT = 3000;
-let   app  = express();
+let app = express();
 
-// Format JSON
-app.set("json spaces", 4);
-
-// Meets at the root
-app.get("/", (req, res) => res.json({status: "DontStop API"}));
-
-app.get("/tasks", (req, res) => {
-    res.json({
-        tasks: [
-            {title: "Go shopping!"},
-            {title: "Clean the house"}
-        ]
-    });
-});
-
-// Run server
-app.listen(PORT, () => console.log(`DontStop API - port ${PORT}`));
+// Load Models adn Routes
+consign().include("models")
+    .then("libs/middlewares.js")
+    .then("routes")
+    .then("libs/boot.js")
+    .into(app);
