@@ -11,13 +11,14 @@ module.exports = app => {
         const sequelize = new Sequelize(
             config.database,
             config.username,
-            config.password
+            config.password,
+            config.params
         );
 
         db = {
             sequelize,
             Sequelize,
-            models = {}
+            models: {}
         };
 
         const dir = path.join(__dirname, "models");

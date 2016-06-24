@@ -16,15 +16,13 @@ module.exports = (sequelize, DataType) => {
             type: DataType.BOOLEAN,
             allowNull: false,
             defaultValue: false
-        },
-        {
-            classMethods: {
-                associate: (models) => {
-                    Task.belongsTo(models.User);
-                }
+        }
+    }, {
+        classMethods: {
+            associate: (models) => {
+                Task.belongsTo(models.User);
             }
         }
     });
-
     return Task;
 }
