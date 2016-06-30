@@ -5,5 +5,7 @@ module.exports = {
     params: {
         host: "192.168.33.10",
         dialect: "postgres"
-    }
+    },
+    jwtSecret: "Dt0nt5t0p-AP1",
+    jwtSession: {session: false}
 };
